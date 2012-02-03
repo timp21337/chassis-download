@@ -26,7 +26,6 @@ public class DownloadWWARNLiveTest extends TestCase {
       Date start = new Date();
       System.err.println("Start:" + start);
       
-      assertFalse(new File(repo.getStudiesFileName()).exists());
       repo.downloadFeeds();
       assertTrue(new File(repo.getStudiesFileName()).exists());
 
