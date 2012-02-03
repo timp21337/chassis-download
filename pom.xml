@@ -6,7 +6,7 @@
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>download</name>
-  <url>http://maven.apache.org</url>
+  <url>http://code.google.com/p/dsn-chassis/</url>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -14,7 +14,6 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-<<<<<<< HEAD
     <dependency>
      <groupId>org.cggh</groupId>
      <artifactId>casutils</artifactId>
@@ -39,7 +38,4 @@
      <url>scp://cloud1.cggh.org/var/www/maven2/</url>
     </snapshotRepository>
    </distributionManagement>
-=======
-  </dependencies>
->>>>>>> 6aa317aae16c43e6f68eb67ab89739cfc3e3d35a
 </project>

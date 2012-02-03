@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 A job to enable jenkins to download from chassis.
 
 Configure in /etc/chassis/download/chassi-download.properties
@@ -12,9 +11,3 @@ Run with
 mvn install  
 
 
-
-
-
-=======
-A job for jenkins to download from chassis
->>>>>>> 6aa317aae16c43e6f68eb67ab89739cfc3e3d35a
