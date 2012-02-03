@@ -18,7 +18,6 @@
      <groupId>org.cggh</groupId>
      <artifactId>casutils</artifactId>
      <version>1.0</version>
-     <scope>test</scope>
     </dependency>
   </dependencies>
   <repositories>
