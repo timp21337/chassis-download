@@ -19,12 +19,14 @@ public class WWARNLiveChassisRepository {
   private Configuration configuration = null;
   private String downloadDirectory;
   private String studiesFileName;
+  private String linkedStudiesFileName;
 
   public WWARNLiveChassisRepository() {
     super();
     this.configuration = new Configuration("chassis-download");
     downloadDirectory = configuration.getSetProperty("downloadDirectory");
     studiesFileName = downloadDirectory + "/www.wwarn.org/" + "studies.xml";
+    linkedStudiesFileName = downloadDirectory + "/www.wwarn.org/" + "links.xml";
   }
 
   public void downloadFeeds() throws Exception {
@@ -37,13 +39,19 @@ public class WWARNLiveChassisRepository {
                     wwarnUser, wwarnPassword, "/tmp"));
     
 
-    File studyOut = new File(studiesFileName);
-    studyOut.delete();
+    File studiesOut = new File(studiesFileName);
+    studiesOut.delete();
     String studyFeedUrl = "https://www.wwarn.org/repository/service/content/studies";
 
     CasProtectedResourceDownloader downloader = CasProtectedResourceDownloaderFactory
             .getCasProtectedResourceDownloader(studyFeedUrl);
-    downloader.downloadUrlToFile(studyFeedUrl, studyOut);
+    downloader.downloadUrlToFile(studyFeedUrl, studiesOut);
+    
+    File linksOut = new File(linkedStudiesFileName);
+    String linkedStudiesFeedUrl = "https://www.wwarn.org/repository/service/content/link";
+    downloader = CasProtectedResourceDownloaderFactory
+            .getCasProtectedResourceDownloader(linkedStudiesFeedUrl);
+    downloader.downloadUrlToFile(linkedStudiesFeedUrl, linksOut);
 
   }
 
