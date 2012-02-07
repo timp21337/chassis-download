@@ -71,7 +71,7 @@ public class Configuration {
   }
   
   public String get(String key) {
-    return properties.getProperty(key).trim();
+    return properties.getProperty(key) == null ? null : properties.getProperty(key).trim();
   }  
   public String put(String key, String value) {
     return (String) properties.put(key, value);
