@@ -1,6 +1,6 @@
 A job to enable jenkins to download from chassis.
 
-Configure in /etc/chassis/download/chassi-download.properties
+Configure in /etc/chassis/download/chassis-download.properties
 wwarn-live-user=timp
 wwarn-live-password=sEcrEt
 downloadDirectory=/var/chassis-download/
